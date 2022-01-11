@@ -1,156 +1,737 @@
-2021-04-24 10:43:52.904  INFO 9504 --- [restartedMain] c.c.m.MySpringsecurityPlusApplication    : Starting MySpringsecurityPlusApplication on LAPTOP-DG87IRPQ with PID 9504 (D:\∏˜÷÷¥˙¬Î\java\ø™‘¥œÓƒø\my-springsecurity-plus\target\classes started by HY in D:\∏˜÷÷¥˙¬Î\java\ø™‘¥œÓƒø\my-springsecurity-plus)
-2021-04-24 10:43:52.918  INFO 9504 --- [restartedMain] c.c.m.MySpringsecurityPlusApplication    : The following profiles are active: dev
-2021-04-24 10:43:53.053  INFO 9504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-04-24 10:43:53.053  INFO 9504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-04-24 10:43:56.921  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-04-24 10:43:56.926  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-04-24 10:43:57.008  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 0 Redis repository interfaces.
-2021-04-24 10:43:57.805  INFO 9504 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4bbb41f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-24 10:43:57.817  INFO 9504 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-24 10:43:58.621  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2021-04-24 10:43:58.653  INFO 9504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-24 10:43:58.654  INFO 9504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2021-04-24 10:43:58.987  INFO 9504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-24 10:43:58.987  INFO 9504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5934 ms
-2021-04-24 10:43:59.372  INFO 9504 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-04-24 10:44:01.303  INFO 9504 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-04-24 10:44:04.146  INFO 9504 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-24 10:44:04.450  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-resources/**', GET], []
-2021-04-24 10:44:04.450  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/PearAdmin/**', GET], []
-2021-04-24 10:44:04.450  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/component/**', GET], []
-2021-04-24 10:44:04.451  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/admin/**', GET], []
-2021-04-24 10:44:04.451  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.html', GET], []
-2021-04-24 10:44:04.451  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.css', GET], []
-2021-04-24 10:44:04.451  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.js', GET], []
-2021-04-24 10:44:04.451  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-ui.html', GET], []
-2021-04-24 10:44:04.451  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**', GET], []
-2021-04-24 10:44:04.451  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/**', GET], []
-2021-04-24 10:44:04.452  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/druid/**', GET], []
-2021-04-24 10:44:04.576  INFO 9504 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5214868c, org.springframework.security.web.context.SecurityContextPersistenceFilter@23e0f0, org.springframework.security.web.header.HeaderWriterFilter@2b6ae432, org.springframework.security.web.authentication.logout.LogoutFilter@272b03ae, com.codermy.myspringsecurityplus.security.filter.VerifyCodeFilter@3b2b457d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@69b8a521, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5c896b11, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17bc9e4f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6fae937f, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@a41de96, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@139f8855, org.springframework.security.web.session.SessionManagementFilter@1d97fdd9, org.springframework.security.web.access.ExceptionTranslationFilter@6d82d9f8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7040144f]
-2021-04-24 10:44:04.908  INFO 9504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-24 10:44:04.996  INFO 9504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-04-24 10:44:05.171  INFO 9504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-04-24 10:44:07.232  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2021-04-24 10:44:07.232  INFO 9504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-24 10:44:07.274  INFO 9504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-24 10:44:07.396  INFO 9504 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-24 10:44:07.828  INFO 9504 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-24 10:44:07.828  INFO 9504 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-24 10:44:07.856  INFO 9504 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
-2021-04-24 10:44:07.859  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteDictUsingDELETE_1
-2021-04-24 10:44:07.881  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_1
-2021-04-24 10:44:07.887  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_1
-2021-04-24 10:44:07.891  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
-2021-04-24 10:44:07.904  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_1
-2021-04-24 10:44:07.964  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPermissionUsingGET_1
-2021-04-24 10:44:07.968  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_2
-2021-04-24 10:44:07.982  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_1
-2021-04-24 10:44:07.985  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateMenuUsingPUT_1
-2021-04-24 10:44:08.014  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_2
-2021-04-24 10:44:08.022  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editRoleUsingGET_1
-2021-04-24 10:44:08.082  INFO 9504 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_2
-2021-04-24 10:44:08.268  INFO 9504 --- [restartedMain] c.c.m.MySpringsecurityPlusApplication    : Started MySpringsecurityPlusApplication in 16.498 seconds (JVM running for 19.216)
-2021-04-24 10:46:07.418  INFO 9136 --- [restartedMain] c.c.m.MySpringsecurityPlusApplication    : Starting MySpringsecurityPlusApplication on LAPTOP-DG87IRPQ with PID 9136 (D:\∏˜÷÷¥˙¬Î\java\ø™‘¥œÓƒø\my-springsecurity-plus\target\classes started by HY in D:\∏˜÷÷¥˙¬Î\java\ø™‘¥œÓƒø\my-springsecurity-plus)
-2021-04-24 10:46:07.422  INFO 9136 --- [restartedMain] c.c.m.MySpringsecurityPlusApplication    : The following profiles are active: dev
-2021-04-24 10:46:07.492  INFO 9136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-04-24 10:46:07.492  INFO 9136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-04-24 10:46:08.878  INFO 9136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-04-24 10:46:08.882  INFO 9136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-04-24 10:46:08.932  INFO 9136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 Redis repository interfaces.
-2021-04-24 10:46:09.548  INFO 9136 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3f427361' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-24 10:46:09.557  INFO 9136 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-24 10:46:09.975  INFO 9136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2021-04-24 10:46:09.991  INFO 9136 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-24 10:46:09.991  INFO 9136 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2021-04-24 10:46:10.108  INFO 9136 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-24 10:46:10.108  INFO 9136 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2616 ms
-2021-04-24 10:46:10.291  INFO 9136 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-04-24 10:46:11.383  INFO 9136 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-04-24 10:46:12.740  INFO 9136 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-24 10:46:12.953  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-resources/**', GET], []
-2021-04-24 10:46:12.954  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/PearAdmin/**', GET], []
-2021-04-24 10:46:12.954  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/component/**', GET], []
-2021-04-24 10:46:12.955  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/admin/**', GET], []
-2021-04-24 10:46:12.955  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.html', GET], []
-2021-04-24 10:46:12.955  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.css', GET], []
-2021-04-24 10:46:12.955  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.js', GET], []
-2021-04-24 10:46:12.956  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-ui.html', GET], []
-2021-04-24 10:46:12.956  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**', GET], []
-2021-04-24 10:46:12.956  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/**', GET], []
-2021-04-24 10:46:12.956  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/druid/**', GET], []
-2021-04-24 10:46:13.025  INFO 9136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73dec3c0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1468ae7b, org.springframework.security.web.header.HeaderWriterFilter@5d75ea22, org.springframework.security.web.authentication.logout.LogoutFilter@3f94f805, com.codermy.myspringsecurityplus.security.filter.VerifyCodeFilter@70bf07c0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1f7a28be, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7b5453a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a0608d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d8666c8, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@1e6cf92a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@431e42a9, org.springframework.security.web.session.SessionManagementFilter@7c8acee9, org.springframework.security.web.access.ExceptionTranslationFilter@7534bdd4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d6dae81]
-2021-04-24 10:46:13.216  INFO 9136 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-24 10:46:13.259  INFO 9136 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-04-24 10:46:13.304  INFO 9136 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-04-24 10:46:14.141  INFO 9136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2021-04-24 10:46:14.148  INFO 9136 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-24 10:46:14.165  INFO 9136 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-24 10:46:14.234  INFO 9136 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-24 10:46:14.262  INFO 9136 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-24 10:46:14.262  INFO 9136 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-24 10:46:14.274  INFO 9136 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
-2021-04-24 10:46:14.623  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteDictUsingDELETE_1
-2021-04-24 10:46:14.643  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_1
-2021-04-24 10:46:14.647  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_1
-2021-04-24 10:46:14.648  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
-2021-04-24 10:46:14.658  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_1
-2021-04-24 10:46:14.707  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPermissionUsingGET_1
-2021-04-24 10:46:14.711  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_2
-2021-04-24 10:46:14.724  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_1
-2021-04-24 10:46:14.726  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateMenuUsingPUT_1
-2021-04-24 10:46:14.744  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_2
-2021-04-24 10:46:14.747  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editRoleUsingGET_1
-2021-04-24 10:46:14.777  INFO 9136 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_2
-2021-04-24 10:46:14.832  INFO 9136 --- [restartedMain] c.c.m.MySpringsecurityPlusApplication    : Started MySpringsecurityPlusApplication in 8.095 seconds (JVM running for 9.843)
-2021-04-24 10:48:20.596  INFO 432 --- [restartedMain] c.c.m.MySpringsecurityPlusApplication    : Starting MySpringsecurityPlusApplication on LAPTOP-DG87IRPQ with PID 432 (D:\∏˜÷÷¥˙¬Î\java\ø™‘¥œÓƒø\my-springsecurity-plus\target\classes started by HY in D:\∏˜÷÷¥˙¬Î\java\ø™‘¥œÓƒø\my-springsecurity-plus)
-2021-04-24 10:48:20.599  INFO 432 --- [restartedMain] c.c.m.MySpringsecurityPlusApplication    : The following profiles are active: dev
-2021-04-24 10:48:20.662  INFO 432 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-04-24 10:48:20.665  INFO 432 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-04-24 10:48:22.134  INFO 432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-04-24 10:48:22.139  INFO 432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-04-24 10:48:22.184  INFO 432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 Redis repository interfaces.
-2021-04-24 10:48:22.782  INFO 432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1c945f93' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-24 10:48:22.791  INFO 432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-24 10:48:23.228  INFO 432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2021-04-24 10:48:23.239  INFO 432 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-24 10:48:23.239  INFO 432 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2021-04-24 10:48:23.409  INFO 432 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-24 10:48:23.411  INFO 432 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2746 ms
-2021-04-24 10:48:23.562  INFO 432 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-04-24 10:48:24.751  INFO 432 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-04-24 10:48:25.934  INFO 432 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-24 10:48:26.110  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-resources/**', GET], []
-2021-04-24 10:48:26.110  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/PearAdmin/**', GET], []
-2021-04-24 10:48:26.114  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/component/**', GET], []
-2021-04-24 10:48:26.114  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/admin/**', GET], []
-2021-04-24 10:48:26.114  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.html', GET], []
-2021-04-24 10:48:26.114  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.css', GET], []
-2021-04-24 10:48:26.114  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.js', GET], []
-2021-04-24 10:48:26.114  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-ui.html', GET], []
-2021-04-24 10:48:26.114  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**', GET], []
-2021-04-24 10:48:26.114  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/**', GET], []
-2021-04-24 10:48:26.114  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/druid/**', GET], []
-2021-04-24 10:48:26.191  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e09df38, org.springframework.security.web.context.SecurityContextPersistenceFilter@31064af2, org.springframework.security.web.header.HeaderWriterFilter@196c8eae, org.springframework.security.web.authentication.logout.LogoutFilter@40e14a0b, com.codermy.myspringsecurityplus.security.filter.VerifyCodeFilter@16df9b4f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5fe795c4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@52ba402c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@391285f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@542c7144, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@18c861af, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74a87af6, org.springframework.security.web.session.SessionManagementFilter@79d21a47, org.springframework.security.web.access.ExceptionTranslationFilter@79d17fd3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e4891fa]
-2021-04-24 10:48:26.364  INFO 432 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-24 10:48:26.415  INFO 432 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-04-24 10:48:26.457  INFO 432 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-04-24 10:48:27.310  INFO 432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2021-04-24 10:48:27.312  INFO 432 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-24 10:48:27.331  INFO 432 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-24 10:48:27.383  INFO 432 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-24 10:48:27.384  INFO 432 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-24 10:48:27.399  INFO 432 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2021-04-24 10:48:27.406  INFO 432 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-24 10:48:27.710  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteDictUsingDELETE_1
-2021-04-24 10:48:27.728  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_1
-2021-04-24 10:48:27.733  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_1
-2021-04-24 10:48:27.735  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
-2021-04-24 10:48:27.745  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_1
-2021-04-24 10:48:27.785  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPermissionUsingGET_1
-2021-04-24 10:48:27.788  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_2
-2021-04-24 10:48:27.801  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_1
-2021-04-24 10:48:27.803  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateMenuUsingPUT_1
-2021-04-24 10:48:27.820  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_2
-2021-04-24 10:48:27.824  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editRoleUsingGET_1
-2021-04-24 10:48:27.859  INFO 432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_2
-2021-04-24 10:48:27.915  INFO 432 --- [restartedMain] c.c.m.MySpringsecurityPlusApplication    : Started MySpringsecurityPlusApplication in 7.969 seconds (JVM running for 9.485)
+2021-12-25 10:57:17.662  INFO 3944 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Starting MoonAdminPlusApplication on R7000-AIR with PID 3944 (C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes started by AIR in C:\Users\AIR\IdeaProjects\moon-admin-system)
+2021-12-25 10:57:17.668  INFO 3944 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : The following profiles are active: dev
+2021-12-25 10:57:17.722  INFO 3944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 10:57:17.722  INFO 3944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 10:57:19.125  INFO 3944 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-25 10:57:19.128  INFO 3944 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-25 10:57:19.181  INFO 3944 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 0 Redis repository interfaces.
+2021-12-25 10:57:19.762  INFO 3944 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@36e3e2a9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 10:57:19.769  INFO 3944 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 10:57:20.158  INFO 3944 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-25 10:57:20.167  INFO 3944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-25 10:57:20.167  INFO 3944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-12-25 10:57:20.263  INFO 3944 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-25 10:57:20.263  INFO 3944 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2540 ms
+2021-12-25 10:57:20.417  INFO 3944 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-12-25 10:57:21.798  INFO 3944 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-12-25 10:57:22.730  INFO 3944 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-25 10:57:22.848  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-resources/**', GET], []
+2021-12-25 10:57:22.848  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/PearAdmin/**', GET], []
+2021-12-25 10:57:22.848  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/component/**', GET], []
+2021-12-25 10:57:22.849  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/admin/**', GET], []
+2021-12-25 10:57:22.849  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.html', GET], []
+2021-12-25 10:57:22.849  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.css', GET], []
+2021-12-25 10:57:22.849  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.js', GET], []
+2021-12-25 10:57:22.849  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-ui.html', GET], []
+2021-12-25 10:57:22.849  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**', GET], []
+2021-12-25 10:57:22.849  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/**', GET], []
+2021-12-25 10:57:22.849  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/druid/**', GET], []
+2021-12-25 10:57:22.899  INFO 3944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1455a4a6, org.springframework.security.web.context.SecurityContextPersistenceFilter@78e7594, org.springframework.security.web.header.HeaderWriterFilter@1cf42882, org.springframework.security.web.authentication.logout.LogoutFilter@5e661c34, com.mysystem.security.filter.VerifyCodeFilter@2d08e91b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@428862af, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@73114c1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16eb554c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@125ff4ba, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@acadcba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b98ce5f, org.springframework.security.web.session.SessionManagementFilter@4c37e30d, org.springframework.security.web.access.ExceptionTranslationFilter@b7b231d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@999224d]
+2021-12-25 10:57:23.022  INFO 3944 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-25 10:57:23.096  INFO 3944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-25 10:57:23.130  INFO 3944 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-25 10:57:24.001  INFO 3944 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-25 10:57:24.002  INFO 3944 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-12-25 10:57:24.017  INFO 3944 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-12-25 10:57:24.055  INFO 3944 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-12-25 10:57:24.201  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_1
+2021-12-25 10:57:24.204  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: buildDeptAllUsingGET_1
+2021-12-25 10:57:24.223  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_1
+2021-12-25 10:57:24.226  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_2
+2021-12-25 10:57:24.228  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_1
+2021-12-25 10:57:24.240  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_1
+2021-12-25 10:57:24.261  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPermissionUsingGET_1
+2021-12-25 10:57:24.263  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_2
+2021-12-25 10:57:24.268  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_2
+2021-12-25 10:57:24.278  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2021-12-25 10:57:24.280  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editRoleUsingGET_1
+2021-12-25 10:57:24.292  INFO 3944 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_2
+2021-12-25 10:57:24.324  INFO 3944 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Started MoonAdminPlusApplication in 7.148 seconds (JVM running for 9.113)
+2021-12-25 10:58:15.183  INFO 3944 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-25 10:58:15.183  INFO 3944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-25 10:58:15.192  INFO 3944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2021-12-25 11:00:36.340 ERROR 3944 --- [http-nio-8080-exec-10] c.m.c.e.GlobalExceptionHandler           : Mapper method 'com.mysystem.admin.dao.DeptDao.checkDeptExistUser attempted to return null from a method with a primitive return type (int).
+2021-12-25 11:00:36.344  WARN 3944 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.apache.ibatis.binding.BindingException: Mapper method 'com.mysystem.admin.dao.DeptDao.checkDeptExistUser attempted to return null from a method with a primitive return type (int).]
+2021-12-25 11:01:04.462  INFO 3944 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-25 11:01:04.464  INFO 3944 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-12-25 11:01:04.469  INFO 3944 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-12-25 11:01:08.672  INFO 9464 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Starting MoonAdminPlusApplication on R7000-AIR with PID 9464 (C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes started by AIR in C:\Users\AIR\IdeaProjects\moon-admin-system)
+2021-12-25 11:01:08.675  INFO 9464 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : The following profiles are active: dev
+2021-12-25 11:01:08.734  INFO 9464 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 11:01:08.734  INFO 9464 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 11:01:10.088  INFO 9464 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-25 11:01:10.090  INFO 9464 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-25 11:01:10.141  INFO 9464 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 Redis repository interfaces.
+2021-12-25 11:01:10.603  INFO 9464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@54d63b96' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:01:10.611  INFO 9464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:01:10.919  INFO 9464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-25 11:01:10.927  INFO 9464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-25 11:01:10.927  INFO 9464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-12-25 11:01:11.008  INFO 9464 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-25 11:01:11.008  INFO 9464 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2274 ms
+2021-12-25 11:01:11.102  INFO 9464 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-12-25 11:01:12.334  INFO 9464 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-12-25 11:01:13.394  INFO 9464 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-25 11:01:13.541  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-resources/**', GET], []
+2021-12-25 11:01:13.542  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/PearAdmin/**', GET], []
+2021-12-25 11:01:13.542  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/component/**', GET], []
+2021-12-25 11:01:13.542  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/admin/**', GET], []
+2021-12-25 11:01:13.542  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.html', GET], []
+2021-12-25 11:01:13.543  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.css', GET], []
+2021-12-25 11:01:13.543  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.js', GET], []
+2021-12-25 11:01:13.543  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-ui.html', GET], []
+2021-12-25 11:01:13.543  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**', GET], []
+2021-12-25 11:01:13.543  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/**', GET], []
+2021-12-25 11:01:13.543  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/druid/**', GET], []
+2021-12-25 11:01:13.620  INFO 9464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d7ecd57, org.springframework.security.web.context.SecurityContextPersistenceFilter@464c4cd5, org.springframework.security.web.header.HeaderWriterFilter@5869a67e, org.springframework.security.web.authentication.logout.LogoutFilter@1c0cd14c, com.mysystem.security.filter.VerifyCodeFilter@66a420ca, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5fa3df03, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5a8da503, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c64f36, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3bfe0dc3, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@2728d18e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29dce9cf, org.springframework.security.web.session.SessionManagementFilter@9892622, org.springframework.security.web.access.ExceptionTranslationFilter@766fe6bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7063a6c0]
+2021-12-25 11:01:13.845  INFO 9464 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-25 11:01:13.945  INFO 9464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-25 11:01:14.014  INFO 9464 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-25 11:01:14.993  INFO 9464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-25 11:01:14.994  INFO 9464 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-12-25 11:01:15.007  INFO 9464 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-12-25 11:01:15.043  INFO 9464 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-12-25 11:01:15.213  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_1
+2021-12-25 11:01:15.217  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: buildDeptAllUsingGET_1
+2021-12-25 11:01:15.239  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_1
+2021-12-25 11:01:15.242  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_2
+2021-12-25 11:01:15.245  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_1
+2021-12-25 11:01:15.257  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_1
+2021-12-25 11:01:15.279  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPermissionUsingGET_1
+2021-12-25 11:01:15.280  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_2
+2021-12-25 11:01:15.286  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_2
+2021-12-25 11:01:15.297  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2021-12-25 11:01:15.299  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editRoleUsingGET_1
+2021-12-25 11:01:15.312  INFO 9464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_2
+2021-12-25 11:01:15.346  INFO 9464 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Started MoonAdminPlusApplication in 7.364 seconds (JVM running for 9.059)
+2021-12-25 11:02:06.099  INFO 9464 --- [Thread-223] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-25 11:02:06.101  INFO 9464 --- [Thread-223] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-12-25 11:02:06.106  INFO 9464 --- [Thread-223] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-12-25 11:02:06.246  INFO 9464 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Starting MoonAdminPlusApplication on R7000-AIR with PID 9464 (C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes started by AIR in C:\Users\AIR\IdeaProjects\moon-admin-system)
+2021-12-25 11:02:06.246  INFO 9464 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : The following profiles are active: dev
+2021-12-25 11:02:06.677  INFO 9464 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-25 11:02:06.677  INFO 9464 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-25 11:02:06.710  INFO 9464 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 0 Redis repository interfaces.
+2021-12-25 11:02:06.809  INFO 9464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@337099d0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:02:06.812  INFO 9464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:02:06.922  INFO 9464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-25 11:02:06.922  INFO 9464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-25 11:02:06.922  INFO 9464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-12-25 11:02:06.941  INFO 9464 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-25 11:02:06.942  INFO 9464 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 693 ms
+2021-12-25 11:02:06.973  INFO 9464 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-12-25 11:02:07.055  INFO 9464 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2021-12-25 11:02:07.405  INFO 9464 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : Illegal access: this web application instance has been stopped already. Could not load [mybatis-mappers/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [mybatis-mappers/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1385) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1038) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:155) [spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:193) [spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.findPathMatchingResources(PathMatchingResourcePatternResolver.java:498) [spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.getResources(PathMatchingResourcePatternResolver.java:298) [spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisProperties.getResources(MybatisProperties.java:210) [mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisProperties.lambda$resolveMapperLocations$0(MybatisProperties.java:205) [mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:267) ~[na:1.8.0_291]
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948) ~[na:1.8.0_291]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_291]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_291]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:546) ~[na:1.8.0_291]
+	at java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260) ~[na:1.8.0_291]
+	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:438) ~[na:1.8.0_291]
+	at org.mybatis.spring.boot.autoconfigure.MybatisProperties.resolveMapperLocations(MybatisProperties.java:205) [mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:161) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fb397181.CGLIB$sqlSessionFactory$2(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fb397181$$FastClassBySpringCGLIB$$cd09e8a3.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fb397181.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:255) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:229) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5128) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_291]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_291]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_291]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_291]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:468) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:437) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:158) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at com.mysystem.MoonAdminPlusApplication.main(MoonAdminPlusApplication.java:10) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+
+2021-12-25 11:02:07.408 ERROR 9464 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationTokenFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao' defined in file [C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes\com\mysystem\admin\dao\UserDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [mybatis-mappers/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+2021-12-25 11:02:07.414  INFO 9464 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-12-25 11:02:07.417  WARN 9464 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Druid-ConnectionPool-Create-1089446346] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2728)
+2021-12-25 11:02:07.417  WARN 9464 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Druid-ConnectionPool-Destroy-1089446346] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Thread.sleep(Native Method)
+ com.alibaba.druid.pool.DruidDataSource$DestroyConnectionThread.run(DruidDataSource.java:2824)
+2021-12-25 11:02:07.418  WARN 9464 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-12-25 11:02:07.419  INFO 9464 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2021-12-25 11:02:07.420  INFO 9464 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2021-12-25 11:02:07.423  INFO 9464 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-25 11:02:07.453 ERROR 9464 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:161) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at com.mysystem.MoonAdminPlusApplication.main(MoonAdminPlusApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:437) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:158) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationTokenFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao' defined in file [C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes\com\mysystem\admin\dao\UserDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [mybatis-mappers/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:255) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:229) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5128) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_291]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_291]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_291]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_291]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:468) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao' defined in file [C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes\com\mysystem\admin\dao\UserDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [mybatis-mappers/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 60 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao' defined in file [C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes\com\mysystem\admin\dao\UserDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [mybatis-mappers/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 73 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao' defined in file [C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes\com\mysystem\admin\dao\UserDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [mybatis-mappers/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 86 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [mybatis-mappers/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 97 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [mybatis-mappers/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 110 common frames omitted
+Caused by: java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [mybatis-mappers/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1385) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1038) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:155) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:193) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.findPathMatchingResources(PathMatchingResourcePatternResolver.java:498) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.getResources(PathMatchingResourcePatternResolver.java:298) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisProperties.getResources(MybatisProperties.java:210) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisProperties.lambda$resolveMapperLocations$0(MybatisProperties.java:205) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:267) ~[na:1.8.0_291]
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948) ~[na:1.8.0_291]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_291]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_291]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:546) ~[na:1.8.0_291]
+	at java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260) ~[na:1.8.0_291]
+	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:438) ~[na:1.8.0_291]
+	at org.mybatis.spring.boot.autoconfigure.MybatisProperties.resolveMapperLocations(MybatisProperties.java:205) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:161) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fb397181.CGLIB$sqlSessionFactory$2(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fb397181$$FastClassBySpringCGLIB$$cd09e8a3.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fb397181.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 111 common frames omitted
+
+2021-12-25 11:02:19.300  INFO 21592 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Starting MoonAdminPlusApplication on R7000-AIR with PID 21592 (C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes started by AIR in C:\Users\AIR\IdeaProjects\moon-admin-system)
+2021-12-25 11:02:19.303  INFO 21592 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : The following profiles are active: dev
+2021-12-25 11:02:19.345  INFO 21592 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 11:02:19.345  INFO 21592 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 11:02:20.262  INFO 21592 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-25 11:02:20.264  INFO 21592 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-25 11:02:20.310  INFO 21592 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 Redis repository interfaces.
+2021-12-25 11:02:20.753  INFO 21592 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6ca02dc3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:02:20.759  INFO 21592 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:02:21.063  INFO 21592 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-25 11:02:21.073  INFO 21592 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-25 11:02:21.073  INFO 21592 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-12-25 11:02:21.162  INFO 21592 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-25 11:02:21.163  INFO 21592 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1818 ms
+2021-12-25 11:02:21.261  INFO 21592 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-12-25 11:02:22.474  INFO 21592 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-12-25 11:02:23.273  INFO 21592 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-25 11:02:23.380  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-resources/**', GET], []
+2021-12-25 11:02:23.380  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/PearAdmin/**', GET], []
+2021-12-25 11:02:23.380  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/component/**', GET], []
+2021-12-25 11:02:23.381  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/admin/**', GET], []
+2021-12-25 11:02:23.381  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.html', GET], []
+2021-12-25 11:02:23.381  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.css', GET], []
+2021-12-25 11:02:23.381  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.js', GET], []
+2021-12-25 11:02:23.381  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-ui.html', GET], []
+2021-12-25 11:02:23.381  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**', GET], []
+2021-12-25 11:02:23.381  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/**', GET], []
+2021-12-25 11:02:23.381  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/druid/**', GET], []
+2021-12-25 11:02:23.427  INFO 21592 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5dcf8ec1, org.springframework.security.web.context.SecurityContextPersistenceFilter@46056fd2, org.springframework.security.web.header.HeaderWriterFilter@4546637e, org.springframework.security.web.authentication.logout.LogoutFilter@7d114c09, com.mysystem.security.filter.VerifyCodeFilter@80cf709, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@535d9901, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@78d83ade, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11da1653, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e24b7f3, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@205bbe6b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f236503, org.springframework.security.web.session.SessionManagementFilter@6d6d4161, org.springframework.security.web.access.ExceptionTranslationFilter@3acf260c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70f8e2c8]
+2021-12-25 11:02:23.547  INFO 21592 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-25 11:02:23.601  INFO 21592 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-25 11:02:23.632  INFO 21592 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-25 11:02:24.345  INFO 21592 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-25 11:02:24.346  INFO 21592 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-12-25 11:02:24.359  INFO 21592 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-12-25 11:02:24.393  INFO 21592 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-12-25 11:02:24.530  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_1
+2021-12-25 11:02:24.534  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: buildDeptAllUsingGET_1
+2021-12-25 11:02:24.554  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_1
+2021-12-25 11:02:24.557  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_2
+2021-12-25 11:02:24.559  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_1
+2021-12-25 11:02:24.571  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_1
+2021-12-25 11:02:24.592  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPermissionUsingGET_1
+2021-12-25 11:02:24.594  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_2
+2021-12-25 11:02:24.599  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_2
+2021-12-25 11:02:24.609  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2021-12-25 11:02:24.611  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editRoleUsingGET_1
+2021-12-25 11:02:24.623  INFO 21592 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_2
+2021-12-25 11:02:24.649  INFO 21592 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Started MoonAdminPlusApplication in 5.722 seconds (JVM running for 7.238)
+2021-12-25 11:02:31.171  INFO 21592 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-25 11:02:31.172  INFO 21592 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-25 11:02:31.180  INFO 21592 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-12-25 11:02:37.069 ERROR 21592 --- [http-nio-8080-exec-3] c.m.c.e.GlobalExceptionHandler           : Mapper method 'com.mysystem.admin.dao.DeptDao.checkDeptExistUser attempted to return null from a method with a primitive return type (int).
+2021-12-25 11:02:37.072  WARN 21592 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.apache.ibatis.binding.BindingException: Mapper method 'com.mysystem.admin.dao.DeptDao.checkDeptExistUser attempted to return null from a method with a primitive return type (int).]
+2021-12-25 11:04:01.091  INFO 21592 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-25 11:04:01.093  INFO 21592 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-12-25 11:04:01.097  INFO 21592 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-12-25 11:04:05.082  INFO 6280 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Starting MoonAdminPlusApplication on R7000-AIR with PID 6280 (C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes started by AIR in C:\Users\AIR\IdeaProjects\moon-admin-system)
+2021-12-25 11:04:05.084  INFO 6280 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : The following profiles are active: dev
+2021-12-25 11:04:05.129  INFO 6280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 11:04:05.129  INFO 6280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 11:04:06.042  INFO 6280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-25 11:04:06.044  INFO 6280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-25 11:04:06.090  INFO 6280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 Redis repository interfaces.
+2021-12-25 11:04:06.520  INFO 6280 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7c449381' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:04:06.526  INFO 6280 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:04:06.821  INFO 6280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-25 11:04:06.829  INFO 6280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-25 11:04:06.829  INFO 6280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-12-25 11:04:06.909  INFO 6280 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-25 11:04:06.909  INFO 6280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1780 ms
+2021-12-25 11:04:07.003  INFO 6280 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-12-25 11:04:08.206  INFO 6280 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-12-25 11:04:08.986  INFO 6280 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-25 11:04:09.093  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-resources/**', GET], []
+2021-12-25 11:04:09.093  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/PearAdmin/**', GET], []
+2021-12-25 11:04:09.093  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/component/**', GET], []
+2021-12-25 11:04:09.093  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/admin/**', GET], []
+2021-12-25 11:04:09.093  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.html', GET], []
+2021-12-25 11:04:09.094  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.css', GET], []
+2021-12-25 11:04:09.094  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.js', GET], []
+2021-12-25 11:04:09.094  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-ui.html', GET], []
+2021-12-25 11:04:09.094  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**', GET], []
+2021-12-25 11:04:09.094  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/**', GET], []
+2021-12-25 11:04:09.094  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/druid/**', GET], []
+2021-12-25 11:04:09.140  INFO 6280 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a1e8c57, org.springframework.security.web.context.SecurityContextPersistenceFilter@e06d06b, org.springframework.security.web.header.HeaderWriterFilter@61c82ea4, org.springframework.security.web.authentication.logout.LogoutFilter@26dd2342, com.mysystem.security.filter.VerifyCodeFilter@75b8f0bc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@60c11c2c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@771b2a9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e619ade, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6af6fd03, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@5103e162, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@120a93b3, org.springframework.security.web.session.SessionManagementFilter@5271f211, org.springframework.security.web.access.ExceptionTranslationFilter@4f67efcb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2140dcde]
+2021-12-25 11:04:09.256  INFO 6280 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-25 11:04:09.308  INFO 6280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-25 11:04:09.339  INFO 6280 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-25 11:04:10.043  INFO 6280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-25 11:04:10.044  INFO 6280 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-12-25 11:04:10.056  INFO 6280 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-12-25 11:04:10.090  INFO 6280 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-12-25 11:04:10.225  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_1
+2021-12-25 11:04:10.229  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: buildDeptAllUsingGET_1
+2021-12-25 11:04:10.248  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_1
+2021-12-25 11:04:10.251  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_2
+2021-12-25 11:04:10.254  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_1
+2021-12-25 11:04:10.265  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_1
+2021-12-25 11:04:10.285  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPermissionUsingGET_1
+2021-12-25 11:04:10.286  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_2
+2021-12-25 11:04:10.291  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_2
+2021-12-25 11:04:10.301  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2021-12-25 11:04:10.302  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editRoleUsingGET_1
+2021-12-25 11:04:10.314  INFO 6280 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_2
+2021-12-25 11:04:10.341  INFO 6280 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Started MoonAdminPlusApplication in 5.625 seconds (JVM running for 7.233)
+2021-12-25 11:04:31.250  INFO 6280 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-25 11:04:31.250  INFO 6280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-25 11:04:31.261  INFO 6280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-12-25 11:04:39.697 ERROR 6280 --- [http-nio-8080-exec-9] c.m.c.e.GlobalExceptionHandler           : Mapper method 'com.mysystem.admin.dao.DeptDao.checkDeptExistUser attempted to return null from a method with a primitive return type (int).
+2021-12-25 11:04:39.700  WARN 6280 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.apache.ibatis.binding.BindingException: Mapper method 'com.mysystem.admin.dao.DeptDao.checkDeptExistUser attempted to return null from a method with a primitive return type (int).]
+2021-12-25 11:07:08.223  INFO 6280 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-25 11:07:08.225  INFO 6280 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-12-25 11:07:08.229  INFO 6280 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-12-25 11:07:11.965  INFO 20568 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Starting MoonAdminPlusApplication on R7000-AIR with PID 20568 (C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes started by AIR in C:\Users\AIR\IdeaProjects\moon-admin-system)
+2021-12-25 11:07:11.967  INFO 20568 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : The following profiles are active: dev
+2021-12-25 11:07:12.009  INFO 20568 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 11:07:12.009  INFO 20568 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 11:07:12.950  INFO 20568 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-25 11:07:12.952  INFO 20568 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-25 11:07:12.999  INFO 20568 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 Redis repository interfaces.
+2021-12-25 11:07:13.427  INFO 20568 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@353aecba' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:07:13.435  INFO 20568 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:07:13.735  INFO 20568 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-25 11:07:13.743  INFO 20568 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-25 11:07:13.744  INFO 20568 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-12-25 11:07:13.823  INFO 20568 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-25 11:07:13.823  INFO 20568 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1814 ms
+2021-12-25 11:07:13.916  INFO 20568 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-12-25 11:07:15.110  INFO 20568 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-12-25 11:07:15.909  INFO 20568 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-25 11:07:16.016  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-resources/**', GET], []
+2021-12-25 11:07:16.016  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/PearAdmin/**', GET], []
+2021-12-25 11:07:16.016  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/component/**', GET], []
+2021-12-25 11:07:16.016  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/admin/**', GET], []
+2021-12-25 11:07:16.016  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.html', GET], []
+2021-12-25 11:07:16.016  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.css', GET], []
+2021-12-25 11:07:16.016  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.js', GET], []
+2021-12-25 11:07:16.016  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-ui.html', GET], []
+2021-12-25 11:07:16.016  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**', GET], []
+2021-12-25 11:07:16.017  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/**', GET], []
+2021-12-25 11:07:16.017  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/druid/**', GET], []
+2021-12-25 11:07:16.064  INFO 20568 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@350446ec, org.springframework.security.web.context.SecurityContextPersistenceFilter@11cc33e6, org.springframework.security.web.header.HeaderWriterFilter@6b897284, org.springframework.security.web.authentication.logout.LogoutFilter@6774f916, com.mysystem.security.filter.VerifyCodeFilter@55131155, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2d938014, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5902982f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79606cf1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@638e8ddb, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@2bc247da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68c0ca73, org.springframework.security.web.session.SessionManagementFilter@7b68bed4, org.springframework.security.web.access.ExceptionTranslationFilter@2b1fa7c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c30eb24]
+2021-12-25 11:07:16.181  INFO 20568 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-25 11:07:16.237  INFO 20568 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-25 11:07:16.269  INFO 20568 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-25 11:07:16.986  INFO 20568 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-25 11:07:16.987  INFO 20568 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-12-25 11:07:17.000  INFO 20568 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-12-25 11:07:17.034  INFO 20568 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-12-25 11:07:17.172  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_1
+2021-12-25 11:07:17.176  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: buildDeptAllUsingGET_1
+2021-12-25 11:07:17.194  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_1
+2021-12-25 11:07:17.197  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_2
+2021-12-25 11:07:17.199  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_1
+2021-12-25 11:07:17.211  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_1
+2021-12-25 11:07:17.231  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPermissionUsingGET_1
+2021-12-25 11:07:17.233  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_2
+2021-12-25 11:07:17.237  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_2
+2021-12-25 11:07:17.248  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2021-12-25 11:07:17.249  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editRoleUsingGET_1
+2021-12-25 11:07:17.261  INFO 20568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_2
+2021-12-25 11:07:17.291  INFO 20568 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Started MoonAdminPlusApplication in 5.695 seconds (JVM running for 7.339)
+2021-12-25 11:07:24.887  INFO 20568 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-25 11:07:24.888  INFO 20568 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-25 11:07:24.897  INFO 20568 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2021-12-25 11:07:46.709 ERROR 20568 --- [http-nio-8080-exec-2] c.m.c.e.GlobalExceptionHandler           : Mapper method 'com.mysystem.admin.dao.ComDao.checkComExistDept attempted to return null from a method with a primitive return type (int).
+2021-12-25 11:07:46.712  WARN 20568 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.apache.ibatis.binding.BindingException: Mapper method 'com.mysystem.admin.dao.ComDao.checkComExistDept attempted to return null from a method with a primitive return type (int).]
+2021-12-25 11:08:08.065  INFO 20568 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-25 11:08:08.067  INFO 20568 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-12-25 11:08:08.071  INFO 20568 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-12-25 11:08:11.758  INFO 9300 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Starting MoonAdminPlusApplication on R7000-AIR with PID 9300 (C:\Users\AIR\IdeaProjects\moon-admin-system\target\classes started by AIR in C:\Users\AIR\IdeaProjects\moon-admin-system)
+2021-12-25 11:08:11.760  INFO 9300 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : The following profiles are active: dev
+2021-12-25 11:08:11.807  INFO 9300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 11:08:11.807  INFO 9300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 11:08:12.724  INFO 9300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-25 11:08:12.726  INFO 9300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-25 11:08:12.774  INFO 9300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 Redis repository interfaces.
+2021-12-25 11:08:13.208  INFO 9300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6925d6fc' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:08:13.216  INFO 9300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-25 11:08:13.504  INFO 9300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-25 11:08:13.512  INFO 9300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-25 11:08:13.512  INFO 9300 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-12-25 11:08:13.593  INFO 9300 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-25 11:08:13.593  INFO 9300 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1786 ms
+2021-12-25 11:08:13.685  INFO 9300 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-12-25 11:08:14.912  INFO 9300 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-12-25 11:08:15.690  INFO 9300 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-25 11:08:15.799  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-resources/**', GET], []
+2021-12-25 11:08:15.799  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/PearAdmin/**', GET], []
+2021-12-25 11:08:15.799  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/component/**', GET], []
+2021-12-25 11:08:15.800  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/admin/**', GET], []
+2021-12-25 11:08:15.800  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.html', GET], []
+2021-12-25 11:08:15.800  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.css', GET], []
+2021-12-25 11:08:15.800  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/*.js', GET], []
+2021-12-25 11:08:15.800  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-ui.html', GET], []
+2021-12-25 11:08:15.800  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**', GET], []
+2021-12-25 11:08:15.800  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/**', GET], []
+2021-12-25 11:08:15.800  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/druid/**', GET], []
+2021-12-25 11:08:15.846  INFO 9300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30453e96, org.springframework.security.web.context.SecurityContextPersistenceFilter@342f41ad, org.springframework.security.web.header.HeaderWriterFilter@176204f6, org.springframework.security.web.authentication.logout.LogoutFilter@659a78c2, com.mysystem.security.filter.VerifyCodeFilter@2daca89b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@119098f2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@13f92533, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9063e27, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18c6600c, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@5b078790, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2abaa54c, org.springframework.security.web.session.SessionManagementFilter@122105b4, org.springframework.security.web.access.ExceptionTranslationFilter@5e34bc80, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3413807e]
+2021-12-25 11:08:15.961  INFO 9300 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-25 11:08:16.014  INFO 9300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-25 11:08:16.047  INFO 9300 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-25 11:08:16.754  INFO 9300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-25 11:08:16.755  INFO 9300 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-12-25 11:08:16.768  INFO 9300 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-12-25 11:08:16.802  INFO 9300 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-12-25 11:08:16.936  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_1
+2021-12-25 11:08:16.939  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: buildDeptAllUsingGET_1
+2021-12-25 11:08:16.958  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_1
+2021-12-25 11:08:16.960  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addJobUsingGET_2
+2021-12-25 11:08:16.963  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_1
+2021-12-25 11:08:16.974  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_1
+2021-12-25 11:08:16.994  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPermissionUsingGET_1
+2021-12-25 11:08:16.995  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: indexUsingGET_2
+2021-12-25 11:08:17.000  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: savePermissionUsingPOST_2
+2021-12-25 11:08:17.010  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2021-12-25 11:08:17.011  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editRoleUsingGET_1
+2021-12-25 11:08:17.024  INFO 9300 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeStatusUsingPUT_2
+2021-12-25 11:08:17.053  INFO 9300 --- [restartedMain] com.mysystem.MoonAdminPlusApplication    : Started MoonAdminPlusApplication in 5.709 seconds (JVM running for 7.282)
+2021-12-25 11:08:23.374  INFO 9300 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-25 11:08:23.374  INFO 9300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-25 11:08:23.382  INFO 9300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-12-25 11:17:20.944 ERROR 9300 --- [http-nio-8080-exec-10] w.a.UsernamePasswordAuthenticationFilter : An internal error occurred while trying to authenticate the user.
+
+org.springframework.security.authentication.InternalAuthenticationServiceException: Áî®Êà∑Ë¢´ÈîÅÂÆö,ËØ∑ËÅîÁ≥ªÁÆ°ÁêÜÂëòËß£ÈîÅ
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123) ~[spring-security-core-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144) ~[spring-security-core-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199) ~[spring-security-core-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:219) ~[spring-security-core-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95) ~[spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at com.mysystem.security.filter.VerifyCodeFilter.doFilterInternal(VerifyCodeFilter.java:48) [classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) [spring-security-web-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_291]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.36.jar:9.0.36]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_291]
+Caused by: org.springframework.security.authentication.LockedException: Áî®Êà∑Ë¢´ÈîÅÂÆö,ËØ∑ËÅîÁ≥ªÁÆ°ÁêÜÂëòËß£ÈîÅ
+	at com.mysystem.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:50) ~[classes/:na]
+	at com.mysystem.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:27) ~[classes/:na]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108) ~[spring-security-core-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+	... 54 common frames omitted
+
+2021-12-25 11:19:06.428  INFO 9300 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-25 11:19:06.430  INFO 9300 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-12-25 11:19:06.433  INFO 9300 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

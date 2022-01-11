@@ -8,11 +8,11 @@
         <version>2.3.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.codermy</groupId>
-    <artifactId>my-springsecurity-plus</artifactId>
+
+    <artifactId>moon-admin-plus</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>my-springsecurity-plus</name>
-    <description>my-springsecurity-plus-admin</description>
+    <name>moon-admin-plus</name>
+    <description>moon-admin-plus</description>
 
     <properties>
         <java.version>1.8</java.version>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <header th:replace="header::html"></header>
+    <link rel="stylesheet" th:href="@{/admin/css/other/console1.css}" />
+</head>
+<body class="pear-container" >
+<div>
+    <div class="layui-row layui-col-space5">
+        <div class="layui-col-md3">
+            <div class="layui-card-body">
+                <a class="pear-btn pear-btn-warming layui-btn-fluid"
+                   href="http://www.hrbeu.edu.cn"
+                   style="font-size:x-large; height: 100px;line-height: 100px;"
+                   target="_blank">官 网</a>
+                <br/>
+            </div>
+        </div>
+        <div class="layui-col-md3">
+            <div class="layui-card-body">
+                <a class="pear-btn pear-btn-success layui-btn-fluid"
+                   href="https://spring.io/projects/spring-boot"
+                   style="font-size:x-large; height: 100px;line-height: 100px;"
+                   target="_blank">SpringBoot</a>
+                <br/>
+            </div>
+        </div>
+        <div class="layui-col-md3">
+            <div class="layui-card-body">
+                <a class="pear-btn pear-btn-primary layui-btn-fluid"
+                   href="https://www.baidu.com/"
+                   style="font-size:x-large; height: 100px;line-height: 100px;"
+                   target="_blank">百 度</a>
+            </div>
+        </div>
+        <div class="layui-col-md3">
+            <div class="layui-card-body">
+                <a class="pear-btn pear-btn-danger layui-btn-fluid"
+                   href="https://gitee.com/"
+                   style="font-size:x-large; height: 100px;line-height: 100px;"
+                   target="_blank">Gitee</a>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md9">
+            <div class="layui-card-body">
+                <div class="layui-carousel" id="test1">
+                    <div carousel-item>
+                        <div><img src="https://static01.imgkr.com/temp/58126cdb077145b5ae46de4a7ecd88e1.png"
+                                  width="100%" text-align="center"></div>
+                        <div><img src="https://static01.imgkr.com/temp/afe16e5179cd4a3aa2b3adcc42311ef8.png"
+                                  width="100%" text-align="center"></div>
+                        <div><img src="https://static01.imgkr.com/temp/b7e038ec8e3c4abba556eb192f9d6ff9.jpg"
+                                  width="100%" text-align="center"></div>
+                        <div><img src="https://static01.imgkr.com/temp/e7c2f1ebb1ac42c69113e9be8c35dd51.jpg"
+                                  width="100%" text-align="center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md3">
+            <div class="layui-card">
+                <div class="layui-card-header">系统信息</div>
+                <div class="layui-card-body">
+                    <table class="layui-table">
+                        <thead>
+                        <tr>
+                            <th>项目名称</th>
+                            <th>Moon-Admin-Plus</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>开发作者</td>
+                            <td>许世越</td>
+                        </tr>
+                        <tr>
+                            <td>当前版本</td>
+                            <td>1.0.8 Version</td>
+                        </tr>
+                        <tr>
+                            <td>基于框架</td>
+                            <td>SpringBoot | SpringSecurity | MyBatis | Layui</td>
+                        </tr>
+                        <tr>
+                            <td>作者邮箱</td>
+                            <td>1531845081@qq.com</td>
+                        </tr>
+                        <tr>
+                            <td>开发时间</td>
+                            <td>2021 年 12 月</td>
+                        </tr>
+                        <tr>
+                            <td>产品定位</td>
+                            <td>信息管理系统</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<th:block th:include="include :: footer"/>
+<script th:inline="javascript">
+    layui.use('carousel', function(){
+        var carousel = layui.carousel;
+        //建造实例
+        carousel.render({
+            elem: '#test1'
+            ,width: '100%' //设置容器宽度
+            ,height:'485px'
+            ,arrow: 'hover' //始终显示箭头
+            ,interval:3000
+            ,autoplay:true
+            ,indicator:'inside'
+        });
+    });
+</script>
+</body>
+</html>
